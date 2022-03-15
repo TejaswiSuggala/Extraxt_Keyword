@@ -67,7 +67,7 @@
         <OutArgument x:TypeArguments="s:String[]">[arr_Lines]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="s:String[]">[System.Text.RegularExpressions.Regex.Matches(str_Text,"^*robots*",RegexOptions.Multiline).Cast(Of Match).Select(Function (m) m.Value.ToString).ToArray()]</InArgument>
+        <InArgument x:TypeArguments="s:String[]">[System.Text.RegularExpressions.Regex.Matches(str_Text,"^.*robots.*",RegexOptions.Multiline).Cast(Of Match).Select(Function (m) m.Value.ToString).ToArray()]</InArgument>
       </Assign.Value>
     </Assign>
     <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each_Looping Extracted Keywords" sap:VirtualizedContainerService.HintSize="434,282.666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[arr_Lines]">
